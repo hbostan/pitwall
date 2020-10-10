@@ -1,7 +1,16 @@
-language: go
+matrix:
+  include:
+    - language: go
+      go: 
+        - 1.15
+      script:
+        - go test -v ./...
 
-go:
-  - 1.15
-
-script:
-  - go test -v ./...
+    - language: node_js
+      node_js:
+        - node
+      before_script:
+        - cd frontend
+        - npm install
+      script:
+        - npm run build
