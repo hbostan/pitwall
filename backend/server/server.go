@@ -16,13 +16,19 @@ func (s *TimingsServer) Session(ctx context.Context, req *protos.EmptyRequest) (
 		Session: &protos.Session{
 			Participants: []*protos.Participant{
 				{
-					Name: "test_driver1",
+					Name:       "test_driver1",
+					TeamId:     1,
+					RaceNumber: 1,
 				},
 				{
-					Name: "test_driver2",
+					Name:       "test_driver2",
+					TeamId:     2,
+					RaceNumber: 2,
 				},
 				{
-					Name: "test_driver3",
+					Name:       "test_driver3",
+					TeamId:     3,
+					RaceNumber: 3,
 				},
 			},
 		},
