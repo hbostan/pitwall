@@ -1,0 +1,30 @@
+{
+  "root": true,
+  "env": {
+    "node": true
+  },
+  "extends": [
+    "plugin:vue/essential",
+    "@vue/airbnb"
+  ],
+  "parserOptions": {
+    "parser": "babel-eslint"
+  },
+  "rules": {
+    "no-console": "off"
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/__tests__/*.{j,t}s?(x)",
+        "**/tests/unit/**/*.spec.{j,t}s?(x)"
+      ],
+      "excludedFiles": [
+        "**/*_pb.js"
+      ],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
+}

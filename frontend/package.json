@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "google-protobuf": "^3.13.0",
+    "grpc-web": "^1.2.1",
     "vue": "^2.6.11"
   },
   "devDependencies": {
@@ -23,9 +25,9 @@
     "@vue/test-utils": "^1.0.3",
     "babel-eslint": "^10.1.0",
     "chromedriver": "85",
-    "eslint": "^6.7.2",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-vue": "^6.2.2",
+    "eslint": "^7.12.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-vue": "^7.1.0",
     "geckodriver": "^1.20.0",
     "vue-template-compiler": "^2.6.11"
   },
@@ -41,12 +43,17 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {},
+    "rules": {
+      "no-console": "off"
+    },
     "overrides": [
       {
         "files": [
           "**/__tests__/*.{j,t}s?(x)",
           "**/tests/unit/**/*.spec.{j,t}s?(x)"
+        ],
+        "excludedFiles": [
+          "**/*_pb.js"
         ],
         "env": {
           "jest": true
